@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Burger Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <header>
+        <div id="stars"></div>
+        <div class="navbar">
+            <img src="./images/logo.png" alt="Logo" />
+            <div class="center-nav">
+                <a href="../index.html">Home</a>
+                <a href="../Menu/index.html">Menu</a>
+                <a href="#">About</a>
+                <a href="../Shops/index.html">Shops</a>
+            </div>
+            <div class="social">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
+                <a href="#"><i class="fa-solid fa-house"></i></a>
+            </div>
+        </div>
+        <div class="text">
+            <h1>About Us</h1>
+            <p>
+                We are passionate about burgers! Our mission is to provide the best quality food with excellent service. Our chefs use fresh ingredients and secret recipes to create delicious meals that keep our customers coming back for more.
+            </p>
+        </div>
+    </header>
+
+    <script>
+        // JavaScript to create stars
+        function createStars() {
+            const starsContainer = document.getElementById("stars");
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement("div");
+                star.className = "star";
+                star.style.left = `${Math.random() * windowWidth}px`;
+                star.style.top = `${Math.random() * windowHeight}px`;
+                starsContainer.appendChild(star);
+            }
+        }
+
+        window.addEventListener("load", createStars);
+    </script>
+</body>
+</html>
